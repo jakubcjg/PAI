@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <input type="text" id="pole">
+        <button onclick="display()">Wyślij</button>
+        <p id="test1"> ... </p>
+
+        <script type="text/javascript">
+            function display() {
+                var napis = document.getElementById("pole").value;
+                document.getElementById("test1").textContent = napis;
+            }
+            
+        </script>
+    </body>
+</html>
