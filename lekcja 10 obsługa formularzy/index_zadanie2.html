@@ -4,21 +4,20 @@
         <meta charset="utf-8">
     </head>
     <body>
-        
         <form>
             <legend>Wybierz*</legend>
-            <input type="radio" value="Wybrano cel podróży" name="transport" /> Wybierz cel podróży<br>
-			<input type="text" value=" " name="transport" /> <br><br>
+            <input type="radio" value="" name="transport" /> Wybierz cel podróży<br>
+			<input type="text" value=" " id="cel" name="transport" /> <br><br>
             <legend> Wybierz bilet*</legend>
-			<input type="checkbox" value="normalny" name="transport" /> Normalny<br>
-			<input type="checkbox" value="ulgowy" name="transport" /> Ulgowy<br>
-			<input type="checkbox" value="studencki" name="transport" /> Studencki<br><br>
+			<input type="checkbox" value="bilet normalny" name="transport" /> Normalny<br>
+			<input type="checkbox" value="bilet ulgowy" name="transport" /> Ulgowy<br>
+			<input type="checkbox" value="bilet studencki" name="transport" /> Studencki<br><br>
 			<legend>Dodatkowe opcje połączenia</legend>
             <input type="checkbox" value="połączenie bezpośrednie" name="transport" /> połączenie bezpośrednie<br>
             <input type="checkbox" value="połączenie w dwie strony" name="transport" /> połączenie w dwie strony<br><br>
 			<form>
             <legend>Wybierz przewoźnika*</legend>
-            <select id="transport">
+            <select id="przewoznik">
                 <option value="PKP Intercity" name="transport">PKP Intercity</option>
                 <option value="Koleje Pomorze Zachodnie" name="transport">Koleje Pomorze Zachodnie</option>
                 <option value="LEO Express" name="transport">LEO Express</option>
@@ -31,6 +30,8 @@
         <script type="text/javascript">
         function display() {
 		
+			var napis1 = document.getElementById('cel').value;
+			var napis2 = document.getElementById('przewoznik').value;
             var field = document.getElementsByName('transport');
             var value1 ='';
             for(var i = 0; i < field.length; i++){
@@ -39,8 +40,8 @@
                 }
             }
             if (value1=='') value1="Wybierz ustawienia połączenia";
-            
-            document.getElementById("test1").textContent = value1;
+			
+            document.getElementById("test1").textContent = napis1 + " to cel Twojej podróży. " + "    Twoje preferencje podróży: " + value1 + "     Twój przewoźnik: " + napis2;
         }
         </script>
             
