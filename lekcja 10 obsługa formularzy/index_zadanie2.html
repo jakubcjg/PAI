@@ -6,10 +6,10 @@
     <body>
         
         <form>
-            <legend>Wybierz</legend>
+            <legend>Wybierz*</legend>
             <input type="radio" value="Wybrano cel podróży" name="transport" /> Wybierz cel podróży<br>
 			<input type="text" value=" " name="transport" /> <br><br>
-            <legend> Wybierz bilet</legend>
+            <legend> Wybierz bilet*</legend>
 			<input type="checkbox" value="normalny" name="transport" /> Normalny<br>
 			<input type="checkbox" value="ulgowy" name="transport" /> Ulgowy<br>
 			<input type="checkbox" value="studencki" name="transport" /> Studencki<br><br>
@@ -17,12 +17,12 @@
             <input type="checkbox" value="połączenie bezpośrednie" name="transport" /> połączenie bezpośrednie<br>
             <input type="checkbox" value="połączenie w dwie strony" name="transport" /> połączenie w dwie strony<br><br>
 			<form>
-            <legend>Wybierz przewoźnika</legend>
+            <legend>Wybierz przewoźnika*</legend>
             <select id="transport">
-                <option value="PKP Intercity">PKP Intercity</option>
-                <option value="Koleje Pomorze Zachodnie">Koleje Pomorze Zachodnie</option>
-                <option value="LEO Express">LEO Express</option>
-                <option value="Ceskie Drahy">Ceskie Drahy</option>
+                <option value="PKP Intercity" name="transport">PKP Intercity</option>
+                <option value="Koleje Pomorze Zachodnie" name="transport">Koleje Pomorze Zachodnie</option>
+                <option value="LEO Express" name="transport">LEO Express</option>
+                <option value="Ceskie Drahy" name="transport">Ceskie Drahy</option>
             </select>
         </form>
         <button onclick="display()">Wyślij</button>
@@ -38,7 +38,7 @@
                     value1 = value1+' '+ field[i].value;
                 }
             }
-            if (value1=='') value1="Nie dokonałeś żadnego wyboru.";
+            if (value1=='') value1="Wybierz ustawienia połączenia";
             
             document.getElementById("test1").textContent = value1;
         }
