@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI zadanie na ocenę</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<legend>Na jaką kwotę chcesz wziąc kredyt?</legend>
+		<input type="text" id="kredyt"> 
+		<legend>Na ile miesięcy bierzesz kredyt?</legend>
+		<input type="text" id="miesiace">
+		<legend>Jakie chcesz oprocentowanie kredytu?</legend>
+		<input type="text" id="oprocentowanie">
+		<br><br>
+        <button onclick="display()">Wyślij</button>
+		<p id="test1"> ... </p>
+		<p id="test2"> ... </p>
+		
+		
+		<script type="text/javascript">
+        function display() {
+		
+			var napis1 = document.getElementById('kredyt').value;
+			var napis2 = document.getElementById('miesiace').value;
+            var napis3 = document.getElementById('oprocentowanie').value;
+			var miesiecznarata = rata(napis1, napis2, napis3)
+            var pustepole ='';
+			
+            document.getElementById("test1").textContent = miesiecznarata;
+			
+        }
+		function rata(napis1, napis2, napis3) {
+			var miesiecznarata = (napis1+napis2/napis3);
+			return miesiecznarata;
+			
+		}
+        </script>
+		
+        </script>
+    </body>
+</html>

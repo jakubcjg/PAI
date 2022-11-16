@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<input type = "number" id = "numer">
+		<button onclick = "wyswietl()">Wyslij</button>
+		
+		<script type = "text/javascript">
+			function wyswietl() {
+				var liczba = document.getElementById("numer").value;
+				
+				for (var i=1; i <= liczba; i++){
+					document.write("*");
+			}
+		}
+        </script>
+    </body>
+</html>
