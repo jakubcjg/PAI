@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>HTML DOM Attributes</h1>
+        <h2>The name Property</h2>
+        <p>The name property returns the name of an attribute:</p>
+
+        <p id="demo"></p>
+
+        <script>
+            const element = document.getElementById("demo");
+            let aName = element.attributes[0].name;
+
+            document.getElementById("demo").innerHTML = aName;
+        </script>
+
+    </body>
+</html>
