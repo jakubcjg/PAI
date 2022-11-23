@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI lekcja 13</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<p>Podaj tekst</p>
+		<input type = "text" id = "tekst">
+		<br>
+		<p>Podaj liczbę ile razy ma się wyświetlić okno dialogowe z wpisanym tekstem</p>
+		<input type = "number" id = "numer">
+		<br><br>
+        <button onclick="display()">Wyślij</button>
+		<script type="text/javascript">
+			
+			
+			function display() {
+				var napis1 = document.getElementById("tekst").value;
+				var napis2 = document.getElementById("numer").value;
+					alert(napis1);
+					
+			}
+				
+        </script>
+    </body>
+</html>
