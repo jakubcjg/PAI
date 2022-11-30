@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI lekcja 14.2 zadanie</title>
+        <meta charset="utf-8">
+    </head>
+	<style>
+	table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+	td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	}
+	</style>
+		<div id = "Posiadacz serwerów:">
+		<b>Posiadacz serwerów:</b>
+		<div id = "div_zmienna">
+		<p id="zmienna">0</p>
+		<button type="button" onclick="dodawanie(1)">Kup</button>
+		<button type="button" onclick="odejmowanie(-1)">Sprzedaj</button>
+		</div>
+		</div>
+		<script>
+			function dodawanie(drugawartosc) {
+				var wartosc = document.getElementById("zmienna");
+				zmienna.innerHTML = parseInt(wartosc.innerHTML) + parseInt(drugawartosc);
+				}
+				
+			function odejmowanie(drugawartosc2) {
+				var wartosc2 = document.getElementById("zmienna");
+				zmienna.innerHTML = parseInt(wartosc2.innerHTML) + parseInt(drugawartosc2);
+				}
+        </script>
+    </body>
+</html>

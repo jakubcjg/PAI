@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI lekcja 14.1 zadanie</title>
+        <meta charset="utf-8">
+    </head>
+	<style>
+	table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+	td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	}
+	</style>
+    <body>
+		<p id = "tekst1">Jakub</p>
+		<button type="button" id = "color1" onclick = "color1()">Zmień kolor tekstu</button>
+		<button type="button" id = "bold1" onclick = "bold1()">Pogrub tekst</button>
+		<button type="button" id = "factory1" onclick = "factory1()">Przywróć ustawienia</button>
+		<p id = "tekst2">Cettler<p>
+		<button type="button" id = "color2" onclick = "color2()">Zmień kolor tekstu</button>
+		<button type="button" id = "bold2" onclick = "bold2()">Pogrub tekst</button>
+		<button type="button" id = "factory2" onclick = "factory2()">Przywróć ustawienia</button>
+    </body>
+	<script>
+	function color1() {
+                document.getElementById("tekst1").style.color = "green";
+            }
+	function color2() {
+                document.getElementById("tekst2").style.color = "red";
+            }
+	function bold1() {
+            document.getElementById("tekst1").style.fontWeight = "900";
+            }
+	function bold2() {
+			document.getElementById("tekst2").style.fontWeight = "900";
+            }
+			
+	function factory1() {
+			document.getElementById("tekst1").style.fontWeight = "200";
+			document.getElementById("tekst1").style.color = "black";
+			}
+	function factory2() {
+			document.getElementById("tekst2").style.fontWeight = "200";
+			document.getElementById("tekst2").style.color = "black";
+			}
+	</script>
+</html>
