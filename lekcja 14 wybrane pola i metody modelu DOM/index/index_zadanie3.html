@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI lekcja 14.2 zadanie</title>
+        <meta charset="utf-8">
+    </head>
+	<style>
+	table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+	td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	}
+	</style>
+		<div id = "Tekst">
+		<b>Tekst</b>
+		<div id = "div_zmienna">
+		<p id="zmienna">0</p>
+		<button type="button" onclick="dodawanie(1)">Kup</button><br>
+		<button type="button" onclick="kupowanie()">Zamów wiele sztuk</button><br>
+		<button type="button" onclick="odejmowanie(-1)">Sprzedaj</button><br>
+		<button type="button" onclick="sprzedawanie()">Sprzedaj wiele sztuk</button><br>
+		</div>
+		</div>
+		<script>
+			function dodawanie(drugawartosc) {
+				var wartosc = parseInt(document.getElementById("zmienna").innerHTML);
+				wartosc = wartosc + 1;
+					document.getElementById("zmienna").innerHTML = wartosc;
+				}
+			
+			function kupowanie(buy) {
+				var wartosc = parseInt(document.getElementById("zmienna").innerHTML);
+				var kupowanie = parseInt(prompt("ile sztuk chcesz zamówić?"));
+				var kup = wartosc + kupowanie
+				document.getElementById("zmienna").innerHTML = kup;
+			}
+			
+			function odejmowanie(drugawartosc2) {
+				var wartosc2 = parseInt(document.getElementById("zmienna").innerHTML);
+				wartosc2 = wartosc2 - 1;
+					document.getElementById("zmienna").innerHTML = wartosc2;
+				}
+				
+			function sprzedawanie(sell) {
+				var wartosc = parseInt(document.getElementById("zmienna").innerHTML);
+				var kupowanie = parseInt(prompt("ile sztuk chcesz zamówić?"));
+				var sprzedaj = wartosc - kupowanie
+				document.getElementById("zmienna").innerHTML = sprzedaj;
+			}
+			
+			function dodatnialiczba(plustext) {
+				var liczba = parseInt(document.getElementById("zmienna").innerHTML);
+				if (wartosc < 0){
+					wartosc + 1;
+				}
+			}
+        </script>
+    </body>
+</html>
